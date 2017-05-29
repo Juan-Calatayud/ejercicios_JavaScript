@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Primeros pasos</title>
+	<style type="text/css" media="screen">
+		.red{
+			color: red;
+		}
+	</style>
+	<script src="js/jquery-3.1.1.js"></script>
+	
+</head>
+<body>
+	
+	<form>
+		Nombre: <input type="text" name="nombre" id="nombre">
+		Email: <input type="text" name="email" id="email">
+	</form>
+
+	<script type="text/javascript">
+		
+		var caja = $("input");
+
+        caja.each(function(){
+            $(this).focus(addRedClass);
+            $(this).blur(removeRedClass);
+        });
+
+        function addRedClass(){
+            $(this).addClass("red");
+        }
+        
+        function removeRedClass(){
+            $(this).removeClass("red");
+        }
+	</script>
+
+</body>
+</html>

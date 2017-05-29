@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+	var paragraphs = document.getElementsByTagName('p');
+
+	for (var i = 0; i < paragraphs.length; i++) {
+		
+		alert(paragraphs[i].textContent);
+
+	}
+
+	</script>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tenetur deserunt unde asperiores, harum earum dignissimos nulla modi odio amet at veritatis quasi a voluptatibus porro! Excepturi possimus, soluta voluptatem.</p>
+	<p>Soluta illum, voluptas. Fugiat dolorum debitis vel autem mollitia explicabo facere culpa, incidunt maxime doloremque reiciendis facilis et ab ut aut. Fuga officiis sit quas aliquid? Praesentium odit fuga distinctio?</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus sequi quia eveniet pariatur totam impedit modi culpa expedita quasi magnam iure incidunt, maiores, ad asperiores eligendi iusto adipisci, ullam autem.</p>
+	<p>Ab iste magni asperiores quaerat praesentium consectetur blanditiis, consequuntur officiis voluptate expedita exercitationem id, illum maiores aperiam fugit deleniti iusto rem obcaecati inventore vero, sint nam sapiente. Dolorem mollitia, labore!</p>
+	<p>Neque perspiciatis, rem laudantium, provident soluta sapiente iste libero rerum sint labore. Atque error sunt, autem quasi illo, ut reiciendis voluptatum alias quibusdam culpa aperiam, maxime, nostrum facilis hic velit.</p>
+	<p>Minus dolore ea sint quasi, explicabo, dignissimos ipsa magni iusto, natus delectus accusantium quod, dicta earum qui. Tempore id rerum voluptatibus ratione fuga recusandae nihil. Error quidem, dicta delectus iure!</p>
+
+	<script type="text/javascript">
+		
+	function add(){
+
+		var element = document.createElement('li');
+
+		var text = document.createTextNode("Elemento de prueba");
+
+		element.appendChild(text);
+
+		var list = document.getElementById('list');
+
+		list.appendChild(element);
+
+		var newElement = "<li>Texto de prueba</li>";
+
+		list.innerHTML = list.innerHTML + newElement;
+
+	}
+
+	</script>
+</body>
+</html>

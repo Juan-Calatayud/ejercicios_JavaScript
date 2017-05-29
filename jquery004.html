@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style type="text/css">
+		.micontenedor{
+			background-color: yellow;
+		}
+	</style>
+	<script src="js/jquery-3.1.1.js"></script>
+	
+	<script>
+        $(document).ready(function(){
+            //alert($("#errores h2").html());
+            $("#errores").html("<p> Hay errores en el formulario </p>"); //la funcino html() sirve para cambiar el texto del html y manipula etiquetas html
+            $("#errores").append("<p> Hay errores en el formulario </p>"); //la funcion append() sirve para añadir texto debajo del que ya tenemos dentro del mismo contenedor.
+            $("#errores").prepend("<p> Hay errores en el formulario (se aplica en el mismo contenedor) </p>"); //la funcion prepend() agrega el contenido antes todo dentro del mismo contenedor
+            $("#errores").before("<p> Hay errores en el formulario (se agrega antes y en otro contenedor) </p>");  //before()agrega el texto antes del que ya tenemos pero en otro contenedor)
+            $("#errores").after("<p> Hay errores en el formulario (se agrega despues y en otro contenedor) </p>");  //after()agrega el texto despues del que ya tenemos pero en otro contenedor)
+            $("#errores h2").text("Hay errores en el formulario"); //sustituye un texto por otro pero no cambia las etiquetas del html
+        });
+    </script>
+
+</head>
+<body>
+	<div id="contenedor">
+
+    	<div id="errores" class="micontenedor">
+        	<h2>Errores</h2>
+    	</div>
+	</div>
+
+	<form>
+	    <input type="text" name="" id="usuario"><br>
+	    <input type="text" name="" id="nombre"><br>
+	    <input type="text" name="" id="apellido"><br>
+	    <input type="button" value="presiona" name="" onclick="validar()">
+	</form>
+
+		<script type="text/javascript">
+	
+	
+		
+		function validar(){
+
+		var n_usuario = document.getElementById("usuario").value;
+
+			if (n_usuario == "") {
+
+				$("#usuario").after("Rellena este campo, por favor");
+
+			}
+
+		}
+
+	
+
+	</script>
+</body>
+</html>

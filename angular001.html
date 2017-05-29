@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+	<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+<body>
+
+	<div>
+    <label>Nombre: </label>
+    <input type="text" ng-model = "tuNombre" placeholder="escribe tu nombre">
+    <hr>
+    <h1>hola {{tuNombre}}!</h1>
+  </div>
+    <div>
+        <h2>Dime tu ciudad</h2>
+        <input type="checkbox" ng-model = "Alcoy">
+        <span>Alcoy</span>
+        <input type="checkbox" ng-model = "Alicante">
+        <span>Alicante</span>
+        <input type="checkbox" ng-model = "Cocentaina">
+        <span>Cocentaina</span>
+        <input type="checkbox" ng-model = "Muro">
+        <span>Muro</span>
+        <input type="checkbox" ng-model = "prueba">
+        <span>otro</span>
+        <textarea ng-show = "prueba"></textarea>
+    </div>
+    <input type="submit" value="archivar">
+
+    <div>
+        <ul ng-init = "gente = [
+                {'name': 'paco', 'age': '40'},
+                {'name': 'paca', 'age': '50'},
+                {'name': 'paqui', 'age': '90'},
+                {'name': 'pepe', 'age': '20'},
+                {'name': 'manolo', 'age': '10'},
+                {'name': 'bartual', 'age': '30'}
+            ]">
+            <label>Filtrar: <input ng-model="personas"></label>
+                         
+                
+            <li ng-repeat = "a in gente | filter:personas">{{a.name}} : {{a.age}}
+            </li>
+        </ul>
+    </div>    
+	
+</body>
+</html>
