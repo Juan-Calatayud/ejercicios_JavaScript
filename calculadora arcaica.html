@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var repetir = "si";
+
+        
+        function suma(num1, num2){
+            alert("la suma es: " + (num1 + num2));
+        }
+        function resta(num1, num2){
+            alert("la resta es: " + (num1 - num2));
+        }
+        function multiplicar(num1, num2){
+            alert("la multiplicacion es: " + (num1*num2));
+        }
+        function dividir(num1, num2){
+            alert("la division es: " + (num1/num2));
+        }
+
+        do{
+        var operacion = prompt("que operacion deseas realizar?");
+
+        var operador1 = parseInt(prompt("introduce el primer num")); //parseInt sirve para passar el string a numero entero para poder realizar la operacion matemática
+        var operador2 = parseInt(prompt("introduce segundo num"));
+
+        if(operacion == "sumar"){
+            suma(operador1,operador2);
+        }else if(operacion == "restar"){
+            resta(operador1,operador2);
+        }else if(operacion == "multiplicacion"){
+            multiplicar(operador1,operador2);
+        }else if(operacion == "division"){
+            dividir(operador1,operador2);
+        }else{
+            alert("lo siento, operacion no aceptada");
+        }
+        repetir =prompt("¿deseae repetir?");
+        }while(repetir == "si");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

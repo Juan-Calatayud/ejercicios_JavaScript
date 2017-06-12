@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Usando arrays</title>
+	<link rel="stylesheet" href="css/micss.css">
+	<script type="text/javascript">
+		
+	var articulos =['zapatillas', 'pantalones', 'balones', 'calcetines'];
+
+	</script>
+</head>
+<body>
+
+	<div class="contenedor">
+		<div class="header">
+			<p class="logo"> JavaScript Arrays </p>
+		</div>
+	</div>
+
+	<div class="contenido">
+		<div class="principal">
+			<h1>Manejando arrays</h1>
+
+			<script type="text/javascript">
+				
+				document.write("<p> el primer artículo es <strong>");
+
+        		document.write(articulos[0] + "</strong></p>");
+
+		        document.write("<p> El ultimo elemento es <strong>");
+
+		        document.write(articulos[articulos.length - 1] + "</strong></p>"); //hay que restarle 1, xq cuenta 4 artículos, pero como se cuenta desde cero, la posicion que queremos es la 3
+
+		        articulos.unshift("balón");  //agrega elementos a la primera posicion del array
+
+		        document.write("<p> casi nos olvidamos!!! agregamos este elemento: <strong>");
+
+		        document.write(articulos[0] + "</strong></p>");
+
+		        document.write("<p> agregemos un elemento mas al final: <strong>");
+
+		        articulos.push("raqueta");  //agregamos un elemento al final del array
+
+		        document.write(articulos[articulos.length-1] + "</strong></p>");
+
+		        articulos.push(prompt("introduce un articulo"));
+
+		        document.write("<p> agregemos un elemento mas al final: <strong>");
+
+		        document.write(articulos[articulos.length-1] + "</strong></p>");
+
+		        articulos.shift();
+
+		        alert(articulos);
+			</script>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="Jquery/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		
+	$(document).ready(function(){
+
+		document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+
+		document.getElementById("img1").addEventListener("mouseout", restaurar, false);
+
+	});
+
+	function cambiar(){
+
+		$("img").attr("src", "imgs/coche.png");
+	}
+
+	function restaurar(){
+
+		$("img").attr("src", "imgs/arbol.jpg");
+	}
+
+	</script>
+</head>
+<body>
+
+<img src="imgs/arbol.jpg" id="img1">
+	
+</body>
+</html>

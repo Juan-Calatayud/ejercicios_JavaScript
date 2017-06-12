@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var parejas = prompt('¿cuantas parejas?');
+
+	var cartas = []
+
+	for( var i = 1; i <= parejas*2; i++){ //es +2 xq hay una pareja de cartas
+		
+		cartas.push(i,i);
+		
+		var divNode = document.createElement('div');
+		
+		divNode.innerHTML = i;
+		
+		document.body.appendChild(divNode);
+	}
+
+	alert(cartas);
+	
+</script>
+	
+</body>
+</html>
